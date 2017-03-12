@@ -1,0 +1,10 @@
+body {
+  background: #eee; }
+
+p {
+  background: pink;
+  text-align: justify;
+  text-justify: inter-word;
+  border: 1px solid red; }
+
+/*# sourceMappingURL=comme.css.map */
