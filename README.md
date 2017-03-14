@@ -1,5 +1,5 @@
 启动配置Apache服务器
-启动
+
 打开“终端(terminal)”，输入 sudo apachectl -v，（可能需要输入机器秘密）。如下显示Apache的版本
 ￼
 接着输入 sudo apachectl start，这样Apache就启动了。打开Safari浏览器地址栏输入 “http://localhost”，可以看到内容为“It works!”的页面。其位于“/Library（资源库）/WebServer/Documents/”下，这就是Apache的默认根目录。
@@ -80,4 +80,4 @@ Mac系统自带apache服务器
 * //修改后(即去掉#注释)
 * LoadModule php5_module libexec/apache2/libphp5.so 
 
-
+finnal...
