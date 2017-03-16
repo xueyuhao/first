@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <title>分栏布局</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    *{
+      box-sizing: border-box; /*盒模型计算模式*/
+    }
+    .cls{
+      /*column-width:300px;
+      -webkit-column-width:300px;*/
+      column-count: 3;  /*分3栏*/
+      -webkit-column-count: 3;
+      margin:0 auto; /*分栏项目剧中显示*/
+      max-width:800px;  /*限制所有栏的最大宽度*/
+      min-width:600px;  /*限制所有栏最小宽度*/
+      /*column-rule: 1px dotted #ccc;*/
+    }
+    .cls h2{  /*跨栏标题*/
+      column-span:all;
+      text-align:center;
+      margin:0;
+      padding:10px 0;
+      box-shadow:0 0 5px #ccc;
+    }
+    .cls div {    /*分栏区域*/
+      padding-top:10px;
+      height:320px; /*给出每栏高度*/
+    }
+    .cls p{
+      height:300px; /*给出内容区域高度<=每栏高度+padding-top的px值*/
+      margin:0;
+      box-shadow:0 0 5px #ccc;
+    }
+    p:hover{
+      box-shadow:0 0 10px #aaa;/*移入阴影效果*/
+    }
+  </style>
+</head>
+<body>
+  <div class="cls">
+  <h2 class="titles">columns 跨列 column-span：all演示</h2>
+    <div>
+      <p>
+        分栏实现三页居中显示效果，分栏实现三页居中显示效果，分栏实现三页居中显示效果，分栏实现三页居中显示效果，分栏实现三页居中显示效果，分栏实现三页居中显示效果，分栏实现三页居中显示效果，分栏实现三页居中显示效果，分栏实现三页居中显示效果。
+      </p>
+    </div>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      </p>
+    </div>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      </p>
+    </div>
+  </div>
+</body>
+</html>
