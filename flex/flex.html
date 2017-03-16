@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <title>flex布局</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+  /*骰子布局*/
+    .flex{
+      display: flex;
+      flex-wrap: wrap;
+      width:600px;
+      margin:0 auto;
+    }
+    h1{
+      text-align:center;
+    }
+    .fl{
+      margin:10px;
+      display:flex;
+      -webkit-display:flex;
+      width:80px;
+      height:80px;
+      background: #000;
+      border:5px solid #333;
+      border-radius:5px;
+    }
+    span{
+      background: #eee;
+      width:20px;
+      height:20px;
+      border-radius:5px;
+    }
+    .fl1{
+      justify-content: center;
+      align-items:center;
+    }
+    .fl2,.fl3{
+      justify-content: space-between;
+    }
+    .fl2 span:nth-child(2){
+      align-self: flex-end;
+    }
+    .fl3 span:nth-child(2){
+      align-self:center;
+    }
+    .fl3 span:nth-child(3){
+      align-self:flex-end;
+    }
+    .fl4,.fl5{
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .column{
+      display: flex;
+      justify-content: space-between;
+    }
+    .column span:nth-child(2){
+      align-self:flex-end;
+    }
+    .fl5 .column:nth-child(2){
+      align-self: center;
+    }
+    .fl6{
+      flex-direction:column;
+      justify-content: space-between;
+    }
+    .fl61{
+      justify-content: space-between;
+    }
+    .fl61 .column{
+      flex-direction: column;
+    }
+    .fl7,.fl8,.fl9{
+      flex-direction:column;
+      justify-content: space-between;
+    }
+    .fl7 .column,.fl8 .column,.fl8 .column{
+      display:flex;
+      justify-content: space-between;
+    }
+    .fl71,.fl81{
+      justify-content: space-between;
+    }
+    .fl71 .column,.fl81 .column{
+      display:flex;
+      flex-direction:column;
+    }
+
+    /*网格布局*/
+    .grids{
+      display:flex;
+      -webkit-display:flex;
+      flex-direction:column;
+      margin:0 auto;
+      max-width: 1000px;
+      padding:20px;
+    }
+    .grid{
+
+      display:flex;
+      -webkit-display:flex;
+      margin:10px;
+      height:80px;
+      background: #eee;
+      border:5px solid #aaa;
+      border-radius:5px;
+    }
+    .cell{
+      background: purple;
+      border:1px solid #eee;
+      flex:1;
+      margin:5px;
+    }
+    .grid1 .cell{
+      flex:1;
+    }
+    .grid2 .cell:nth-child(1){
+      flex:0 0 50%;
+    }
+    .grid3 .cell:nth-child(1){
+      flex:0 0 75%;
+    }
+    /*圣杯布局*/
+    .holys{
+      display:flex;
+      -webkit-display:flex;
+      flex-direction:column;
+      margin:0 auto;
+      max-width: 1000px;
+      height:400px;
+      background: #ccc;
+    }
+    header,footer{
+     flex:1;
+     background:#f00;
+    }
+    .mains{
+      flex:3;
+      display:flex;
+      -webkit-display:flex;
+    }
+    nav{
+      flex:1;
+      background: #ff0;
+    }
+    main{
+      flex:4;
+      background: #f0f;
+    }
+    aside{
+      flex:1;
+      background: #0ff;
+    }
+  </style>
+</head>
+<body>
+<h1>Flex实现的通用布局方式</h1>
+<h1>骰子🎲布局</h1>
+  <div class="flex">
+    <div class="fl fl1">
+      <span></span>
+    </div>
+    <div class="fl fl2">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="fl fl3">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="fl fl4">
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="fl fl5">
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="fl fl6">
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="fl fl61">
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="fl fl7">
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="fl fl71">
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="fl fl8">
+      <div class="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="fl fl81">
+      <div class="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="fl fl9">
+      <div class="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+<h1>网格🕸️布局</h1>
+  <div class="grids">
+    <div class="grid grid1">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="grid grid2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="grid grid3">
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="grid grid4">
+      <div class="cell"></div>
+    </div>
+  </div>
+<h1>圣杯🏆布局</h1>
+  <div class="holys">
+    <header>头部</header>
+    <div class="mains">
+      <nav>导航</nav>
+      <main>主题</main>
+      <aside>边栏</aside>
+    </div>
+    <footer>页脚</footer>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
