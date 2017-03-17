@@ -1,24 +1,25 @@
-#Apache服务器配置
+# Apache虚拟主机配置
 
 >启动配置Apache服务器
-打开“终端(terminal)”，输入 sudo apachectl -v，（可能需要输入机器秘密）。如下显示Apache的版本
-接着输入 sudo apachectl start，这样Apache就启动了。打开Safari浏览器地址栏输入 “http://localhost”，可以看到内容为“It works!”的页面。其位于“/Library（资源库）/WebServer/Documents/”下，这就是Apache的默认根目录。
-Apache的安装目录在：/etc/apache2/，etc默认是隐藏的。有三种方式查看：
-1. dock下右键Finder，选择"前往文件夹"，输入"/etc"
-2. 在finder下－－－－》前往－－－》前往文件夹，然后输入/etc
-3. 可以在terminal 输入 "open /etc"
-配置
+打开“终端(terminal)”，输入 sudo apachectl -v，（需要输入机器密码）。显示Apache的版本
+接着输入 sudo apachectl start，这样Apache就启动了。打开Safari浏览器地址栏输入 “http://localhost”，可以看到内容为“It works!”的页面。
+其位于“/Library（资源库）/WebServer/Documents/”下，这就是Apache的默认根目录。
+Apache的安装目录在：/etc/apache2/，etc默认是隐藏的。查看：
+* 可以在terminal 输入 "open /etc"
+
+## 配置
+
 1. 在终端运行“sudo vi /etc/apache2/httpd.conf”，打开Apche的配置文件
 2. 在httpd.conf中找到“#Include /private/etc/apache2/extra/httpd-vhosts.conf”，去掉前面的“＃”，保存并退出。
 3. 运行“sudo apachectl restart”，重启Apache后就开启了虚拟主机配置功能。
 4. 运行“sudo vi /etc/apache2/extra/httpd-vhosts.conf”，就打开了配置虚拟主机文件httpd-vhost.conf，配置虚拟主机了。需要注意的是该文件默认开启了两个作为例子的虚拟主机
 
-###出现Forbidden异常：
+### 出现Forbidden异常：
 
 Forbidden
 You don't have permission to access / on this server.
 
-###解决方法如下
+### 解决方法如下
 
 Mac系统自带apache服务器
 * 查看apache版本sudo apachectl -v 
@@ -76,8 +77,8 @@ Mac系统自带apache服务器
 * 打开浏览器输入http://你的网站地址
 补充:
 * PHP mac 内置php, 默认是关闭的. 开启: 打开/etc/apache2/httpd.conf文件// 169行
-* #LoadModule php5_module libexec/apache2/libphp5.so
+* >LoadModule php5_module libexec/apache2/libphp5.so
 * //修改后(即去掉#注释)
-* LoadModule php5_module libexec/apache2/libphp5.so 
+* >LoadModule php5_module libexec/apache2/libphp5.so 
 
-finnal...
+## finnal...
