@@ -5,7 +5,7 @@
 接着输入 sudo apachectl start，这样Apache就启动了。打开Safari浏览器地址栏输入 “http://localhost”，可以看到内容为“It works!”的页面。
 其位于“/Library（资源库）/WebServer/Documents/”下，这就是Apache的默认根目录。
 Apache的安装目录在：/etc/apache2/，etc默认是隐藏的。查看：
-* 可以在terminal 输入 "open /etc"
+可以在terminal 输入 "open /etc"
 
 ## 配置
 
@@ -48,10 +48,10 @@ Mac系统自带apache服务器
         * </Directory>
         * 
         * //498行
-        * # Virtual hosts
+        * #Virtual hosts
         * #Include /private/etc/apache2/extra/httpd-vhosts.conf
         * //改为(去掉前面的#，这样就开启了httpd-vhosts虚拟主机文件)
-        * # Virtual hosts 
+        * #Virtual hosts 
         * Include /private/etc/apache2/extra/httpd-vhosts.conf 
 * 设置虚拟主机 apache的默认的根目录在/Library/WebServer/下，配置虚拟主机后可以不用理会默认的网站根目录，根据自己的需要在合适的地方建立不同的网站目录
     * 修改httpd-vhosts.conf文件，文件位置在/etc/apache2/extra/
