@@ -1,0 +1,90 @@
+/*body,div,p,b,s,a,em,header,footer,ul,ol,li,dt,dd,dl{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+ul{
+  list-style: none;
+}
+img{
+  vertical-align: bottom;
+}
+a{
+  color:rgb(30,30,30);
+  text-decoration:none;
+  font-size:14px;
+}
+a:hover,a.active{
+  color: rgb(235,0,0);
+}
+body{
+  background:#fff;
+  font-family:Helvetica, "Pingfang SC", "Microsoft YaHei", STHeiti, Verdana, Arial, Tahoma, sans-serif;
+}
+.float_r{
+  float:right;
+}
+.float_l{
+  float:left;
+}
+.ufo{
+  overflow:hidden;
+}
+header{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  height:48px;
+  border-bottom:1px solid #eee;
+}
+nav{
+  background: #fff;
+  padding:14px 15px;
+  height:48px;
+}
+.yz_logo{
+  height: 27px;
+}
+
+.yz_logo img{
+  height:27px;
+  width:78px;
+}
+
+nav span{
+  position: absolute;
+  right: 10px;
+  top:10px;
+  margin-right:15px;
+  width:24px;
+  height:3px;
+  box-shadow: 0px 4px 0px #fff, 0px 8px 0px #666, 0px 12px 0px #fff, 0px 16px 0px #666, 0px 20px 0px #fff, 0px 24px 0px #666;
+  -webkit-box-shadow: 0px 4px 0px #fff, 0px 8px 0px #666, 0px 12px 0px #fff, 0px 16px 0px #666, 0px 20px 0px #fff, 0px 24px 0px #666;
+  -ms-box-shadow: 0px 4px 0px #fff, 0px 8px 0px #666, 0px 12px 0px #fff, 0px 16px 0px #666, 0px 20px 0px #fff, 0px 24px 0px #666;
+  -o-box-shadow: 0px 4px 0px #fff, 0px 8px 0px #666, 0px 12px 0px #fff, 0px 16px 0px #666, 0px 20px 0px #fff, 0px 24px 0px #666;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
