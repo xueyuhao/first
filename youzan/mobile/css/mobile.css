@@ -1,0 +1,29 @@
+body,div,p,b,s,a,em,header,footer,ul,ol,li,dt,dd,dl{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+#logo{
+  margin:0;
+  border:none;
+  box-shadow: none;
+  padding: 14px 15px;
+  background: transparent;
+}
+#logo i{
+  display: inline-block;
+  width:72px;
+  height:27px;
+  background: url(../img_phone/wap_logo@2x.png) 0 0 no-repeat;
+  background-size: 72px 27px;
+}
+#header {
+  background: #fff;
+  margin:0;
+  height:55px;  
+}
+#header>.bars{
+  border:none;
+  box-shadow: none;
+  background: transparent;
+}
