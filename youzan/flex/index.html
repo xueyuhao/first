@@ -4,24 +4,25 @@
   <meta charset="utf-8">
   <title>有赞-生意人的工具</title>
   <link type="image/x-icon" rel="shortcut icon" href="./img/yz_fc.ico" />
-  <link rel="stylesheet" type="text/css" href="./css/float.css">
+  <link rel="stylesheet" type="text/css" href="./css/flex.css">
 </head>
 <body>
   <header>
-    <nav class="ufo content">
+    <nav class="content">
       <a class="yz_logo" href=""><img src="./img/e585d313de3013698ad95968e2456240.png"></a>
       <ul class="navbar">
         <li><a href="" class="active">首页</a></li>
-        <li  class="nav_sub"><a href="" class="nav_product">产品中心<i></i></a>
-            <ul>
-              <li><a href="">微商城基出版</a></li>
-              <li><a href="">微商城商业版</a></li>
-              <li><a href="">微小店</a></li>
-              <li><a href="">有赞收银</a></li>
-              <li><a href="">有赞批发</a></li>
-              <li><a href="">有赞小程序</a></li>
-              <li><a href="">买家版</a></li>
-            </ul>
+        <li class="nav_sub">
+          <a href="" class="nav_product">产品中心<i></i></a>
+          <ul>
+            <li><a href="">微商城基出版</a></li>
+            <li><a href="">微商城商业版</a></li>
+            <li><a href="">微小店</a></li>
+            <li><a href="">有赞收银</a></li>
+            <li><a href="">有赞批发</a></li>
+            <li><a href="">有赞小程序</a></li>
+            <li><a href="">买家版</a></li>
+          </ul>
         </li>
         <li><a href="">行业方案</a></li>
         <li><a href="">开放平台</a></li>
@@ -33,11 +34,375 @@
       </ul>
     </nav>
   </header>
-  <div class="banner">
-    
+  <div class="banner" id="banners">
+      <div class="content">
+        <div class="bar_ban">
+          <ul id="change_active">
+            <li class="active"><img src="./img/index_ico1@2x.png">微商城</li>
+            <li><img src="./img/index_ico2@2x.png">微小店</li>
+            <li><img src="./img/index_ico3@2x.png">有赞收银</li>
+            <li><img src="./img/index_ico4@2x.png">有赞批发</li>
+            <li><img src="./img/index_ico5@2x.png">有赞小程序</li>
+            <li><img src="./img/index_ico6@2x.png">开放平台</li>
+            <li><img src="./img/index_ico7@2x.png">商家社区</li>
+            <li><img src="./img/index_ico8@2x.png">服务支持</li>
+          </ul>
+          <div class="ban_info active">
+            <div class="content">
+              <p class="ban_title">微商城</p>
+              <p class="ban_descript">
+                强大的微商城，完整的移动电商解决方案
+                <br>面向线下实体门店和线上传统电商
+              </p>   
+              <span></span>
+              <div class="ban_a">
+                <a href="">免费试用</a>
+                <a href="">了解详情</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ban_info">
+            <div class="content">
+              <p class="ban_title">微小店</p>
+              <p class="ban_descript">
+                免费的手机开店工具
+                <br>简单好用，满足日常经营需求
+              </p>
+              <span>全面支持 iPhone 和 Android 主流机型</span>
+              <div class="ban_a">
+                <a href="">免费下载
+                  <span class="weixin_img">
+                    <span>微信扫码下载</span>
+                    <img src="img/wxd_code1130.png">
+                    <i></i>
+                  </span>
+                </a>
+                <a href="">了解详情</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ban_info">
+            <div class="content">
+              <p class="ban_title">有赞收银</p>
+              <p class="ban_descript">
+                一站式收银解决方案
+                <br>零成本接入微信支付、支付宝、刷卡
+              </p>
+              <span>全面支持 iPhone 和 Android</span> 
+              <div class="ban_a">
+                <a href="">立即下载
+                  <span class="weixin_img collect_money">
+                    <span>微信扫码下载</span>
+                    <img src="img/mobile_code_new_20161004@2x.png">
+                    <img src="img/ipad_code_2X.png">
+                    <b>手机版</b><b>iPad版</b>
+                    <i></i>
+                  </span>
+                </a>
+                <a href="">了解详情</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ban_info">
+            <div class="content">
+              <p class="ban_title">有赞批发</p>
+              <p class="ban_descript">
+                传统批发+互联网解决方案
+                <br>服务于：批发市场+批发档口+进货商 
+              </p>
+              <span></span> 
+              <div class="ban_a">
+                <a href="">了解详情</a>
+                <a href=""></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ban_info">
+            <div class="content">
+              <p class="ban_title">有赞小程序</p>
+              <p class="ban_descript">
+                一键生成，快速拥有
+                <br>帮商家快速对接微信小程序
+                <br>无需单独开发
+              </p>
+              <span></span>
+              <div class="ban_a">
+                <a href="">立即使用</a>
+                <a href="">了解详情</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ban_info">
+            <div class="content">
+              <p class="ban_title">开放平台</p>
+              <p class="ban_descript">
+                与第三方合作，全力推进线上线下互通
+                <br>对接软件、硬件、插件、App开发者等
+                <br>合作伙伴
+              </p>
+              <span></span>
+              <div class="ban_a">
+                <a href="">了解详情</a>
+                <a href=""></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ban_info">
+            <div class="content">
+              <p class="ban_title">商家社区</p>
+              <p class="ban_descript">
+                有赞商家在线交流社区
+                <br>官方咨询、产品动态、营销玩法、 
+                <br>明星店铺、新手教程 
+              </p>
+              <span></span>
+              <div class="ban_a">
+                <a href="">了解详情</a>
+                <a href=""></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ban_info">
+            <div class="content">
+              <p class="ban_title">服务支持</p>
+              <p class="ban_descript">
+                专属服务经理对接商家
+                <br>商家还可通过学堂、商盟、沙龙、 
+                <br>提升运营能力
+              </p>
+              <span></span>
+              <div class="ban_a">
+                <a href="">了解详情</a>
+                <a href=""></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+  </div>
+  <div class="solve_plan content">
+    <div class="solve_title title">
+      <h1>垂直行业解决方案</h1>
+      <p>整合资源、深度挖掘，提供一站式服务解决方案</p>
+    </div>
+    <div class="solve_list">
+      <div class="solve_many_door">
+          <h2>多门店解决方案</h2>
+          <p>面向实体零售，完整的多门店线上经营方案 <br>全渠道信息化管理工具</p>
+          <a href="">了解详情</a>
+      </div>
+      <div class="solve_ticket">
+          <h2>票务解决方案</h2>
+          <p>在线售票，到场核销，提升售验票效率 <br>触达用户，精准营销，助力营收增长</p>
+          <a href="">了解详情</a>
+      </div>
+      <div class="solve_medium">
+          <h2>媒体服务解决方案</h2>
+          <p>面向媒体行业提供粉丝互动、渠道选货、在 <br>线营销、仓储物流等全方位的运营支持</p>
+          <a href="">了解详情</a>
+      </div>
+      <div class="solve_app">
+          <h2>App开店解决方案</h2>
+          <p>用SDK把有赞微商城接入到App里 <br>用App大师快速制作出App</p>
+          <a href="">了解详情</a>
+      </div>
+    </div>
+  </div>
+  <div class="serve content">
+    <div class="serve_title title">
+      <h1>移动零售服务生态</h1>
+      <p>联合服务商、开发者、经营专家，共建服务生态，服务百万商家</p>
+    </div>
+    <div class="serve_list">
+      <ul>
+        <li><a href="">服务市场</a></li>
+        <li><a href="">有赞会员</a></li>
+        <li><a href="">商家社区</a></li>
+        <li><a href="">有赞学堂</a></li>
+        <li><a href="">有赞商盟</a></li>
+        <li><a href="">开放平台</a></li>
+        <li><a href="">SDK</a></li>
+        <li><a href="">消费保障</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="case content">
+    <div class="case_title title">
+      <h1>商家案例</h1>
+      <p>服务超过200万商家，为各类企业提供全套解决方案</p>
+    </div>
+    <div class="case_list">
+      <ul class="case_list_1">
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+      <ul class="case_list_2">
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+      <ul class="case_list_3">
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </div>
+    <div class="case_more">
+      <a href="">功能案例</a>
+    </div>
+  </div>
+  <div class="dynamic content">
+    <div class="dynamic_title title">
+      <h1>有赞动态</h1>
+    </div>
+    <div class="dynamic_list">
+      <div class="dynamic_list_about">
+        <h6>关于有赞</h6>
+        <p>
+          2012年11月27日，有赞（原名口袋通）在杭州贝塔咖<br>
+          啡馆孵化。主要从事移动电子商务系统研发、运营，目<br>
+          前旗下有：有赞微商城、有赞收银、有赞供货商、有赞<br>
+          微小店、有赞批发、有赞买家版等产品，以及全员开店<br>
+          移动分销解决方案。有赞希望成为交易生态里最被信任<br>
+          的引领者，并持续保持为一个“开心”的组织。
+        </p>
+      </div>
+      <div class="dynamic_list_medium">
+        <h6>媒体报道</h6>
+        <ul>
+          <li><a href="">搜狐｜有赞携智能收银硬件亮相微信支付合作伙伴大会</a></li>
+          <li><a href="">联商｜有赞携手21CN聚投诉 合力维护消费者权益</a></li>
+          <li><a href="">红商｜ 中国扶贫基金会携手有赞，探索“互联网＋扶贫”</a></li>
+          <li><a href="">联商｜企业服务风口已来，有赞亿元巨资扶植代理商</a></li>
+          <li><a href="">网易｜文怡、醉鹅娘有赞开店,抢滩内容电商热潮</a></li>
+          <li><a href="">新华网｜沪花拾者携手有赞 帮千家花店老板网上开店</a></li>
+          <li><a href="">中国网｜有赞推千万粉丝大号，助力商家做成交</a></li>
+        </ul>
+      </div>
+      <div class="dynamic_list_friends">
+        <h6>合作伙伴</h6>
+        <div class="dynamic_list_img">
+          <ul>
+            <li><img src="img/partner_icon_1.png"></li>
+            <li><img src="img/partner_icon_2.png"></li>
+            <li><img src="img/partner_icon_3.png"></li>
+          </ul>
+          <ul>
+            <li><img src="img/partner_icon_4.png"></li>
+            <li><img src="img/partner_icon_5.png"></li>
+            <li><img src="img/partner_icon_6.png"></li>
+          </ul>
+          <ul>
+            <li><img src="img/partner_icon_7.png"></li>
+            <li><img src="img/partner_icon_8.png"></li>
+            <li><img src="img/partner_icon_9.png"></li>
+          </ul>
+          <ul>
+            <li><img src="img/partner_icon_10.png"></li>
+            <li><img src="img/partner_icon_11.png"></li>
+            <li><img src="img/partner_icon_12.png"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
   <footer>
-    
+    <div class="foot content">
+      <div class="foot_list">
+        <div class="foot_about">
+          <h3 class="title">关于有赞</h3>
+          <ul>
+            <li><a href="">关于有赞</a></li>
+            <li><a href="">合作联系</a></li>
+            <li><a href="">加入我们</a></li>
+            <li><a href="">品牌资料包 <img src="img/619f42ed1d7533bc1248c1b9c6aa8e44.png"></a></li>
+          </ul>
+        </div>
+        <div class="foot_serve">
+          <h3 class="title">产品服务</h3>
+          <div class="foot_serve_product">
+            <ul>
+              <li><a href="">微商城</a></li>
+              <li><a href="">有赞收银</a></li>
+              <li><a href="">有赞批发</a></li>
+              <li><a href="">服务市场</a></li>
+            </ul>
+            <ul>
+              <li><a href="">供货商</a></li>
+              <li><a href="">微小店</a></li>
+              <li><a href="">全员开店</a></li>
+              <li><a href="">开放平台</a></li>
+            </ul>
+            <ul>
+              <li><a href="">行业方案</a></li>
+              <li><a href="">买家版</a></li>
+              <li><a href="">消费保障</a></li>
+              <li><a href="">公益开店</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot_cell">
+          <h3>电话咨询</h3>
+          <p>开店咨询：0571 - 8522 5188</p>
+          <p>商家服务：0571 - 8998 8848</p>
+          <span>周一到周日 9:00 ~ 18:00</span>
+        </div>
+        <div class="foot_img">
+          <img src="img/footer_qrcode@2x.png">
+          <p>有赞服务指南</p>
+        </div>
+      </div>
+      <div class="foot_copyright">
+        <p>2012-2017 © youzan.com - &nbsp;<img src="img/276d5f72dc85cc584d83c08fefa36c2b.png"> 浙公网安备 33010602004354号 &nbsp;增值电信业务经营许可证：浙B2-20140331 - 浙ICP备13037466号</p>
+      </div>
+    </div>
   </footer>
+  <script type="text/javascript" src="./js/index.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
