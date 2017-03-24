@@ -238,10 +238,10 @@ nav{
   opacity:0;
   color:#fff;
   width: 100%;
-  -webkit-animation:opacityChange 1.5s ease-in;
-  -ms-animation:opacityChange 1.5s ease-in;
-  -moz-animation:opacityChange 1.5s ease-in;
-  animation:opacityChange 1.5s ease-in;
+  -webkit-animation:opacityChange 1s ease-out;
+  -ms-animation:opacityChange 1s ease-out;
+  -moz-animation:opacityChange 1s ease-out;
+  animation:opacityChange 1s ease-out;
 }
 @keyframes opacityChange{
   0%{opacity:0}
