@@ -1,6 +1,6 @@
 //实现页面图片切换功能
   var colors=["#ea3838","#1089c7","#ff8f04","#ffbe00","#19c971","#1069cf","#ff1548","#471f7a"],
-      // isSwitched=0,
+      isSwitched=0,
       ban_info=document.getElementsByClassName("ban_info"),
       ban_a=document.getElementsByClassName("ban_a")
       change_active=document.getElementById("change_active"),
@@ -174,12 +174,12 @@
 
       }
       change_active.onmousemove=change_active.touch=change_active.onclick=function(e){
-      // if (isSwitched==0){
-      // //是否在切换状态 -->
-      //   var interval=null;
-      //   //清除定时器0.1秒监测一次 监测防止动画叠加-->
-      //   isSwitched=1; 
-      //   interval=setTimeout(function(){isSwitched=0;},100);
+      if (isSwitched==0){
+      //是否在切换状态 -->
+        var interval=null;
+        //清除定时器0.1秒监测一次 监测防止动画叠加-->
+        isSwitched=1; 
+        interval=setTimeout(function(){isSwitched=0;},100);
         var target=e.target,tar_class=target.className;
         if (target.nodeName=="LI"&&tar_class.indexOf("active")==-1){
         //元素判断
@@ -199,7 +199,7 @@
             ban_info[n].style.display="block";
             ban_info[n].style.opacity="1";
         }
-      // }else{
-      //   return;
-      // }
+      }else{
+        return;
+      }
     }
