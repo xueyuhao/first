@@ -17,9 +17,23 @@ html {
 .nav .open > a:focus {
   background-color: transparent;
 }
-/*-------------------------------*/
-/*           Wrappers            */
-/*-------------------------------*/
+.heads{
+  width:100%;
+  position: absolute;
+  top:0;
+  min-height:55px;
+  overflow: hidden;
+}
+.logos{
+  position: absolute;
+  left: 0;
+  top:0;
+}
+.logos img{
+  max-width:72px;
+  margin:15px;
+  float:left;
+}
 #wrapper {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -51,7 +65,7 @@ html {
   display: none;
 }
 #page-content-wrapper {
-  padding-top: 70px;
+  padding-top: 50px;
   width: 100%;
 }
 /*-------------------------------*/
@@ -169,7 +183,7 @@ html {
   padding-right:32px;
   margin-left: 15px;
   position: fixed;
-  top: 20px;
+  top: 10px;
   position: absolute;
   right: 20px;
   width: 32px;  
