@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+<head>
+  <meta charset="utf-8">
+  <title>有赞-生意人的工具</title>
+  <link type="image/x-icon" rel="shortcut icon" href="./img/yz_fc.ico" />
+  <link rel="stylesheet" type="text/css" href="./css/flex.css">
+  <script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+  <div id="bodys">
+    <header>
+      <nav class="content">
+        <a class="yz_logo" href=""><img src="./img/e585d313de3013698ad95968e2456240.png"></a>
+        <!-- 配置nav导航条 -->
+        <ul class="navbar" id="nav">
+          <li v-for="item in Content" v-bind:class=item.class>
+            <a href="" v-bind:class=item.aclass>{{item.Title}}<i v-if=item.i></i></a>
+            <ul v-if=item.list>
+              <li v-for="itmeSub in item.list"><a href="">{{itmeSub}}</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- 配置nav导航条结束 -->
+      </nav>
+    </header>
+    <div class="banner" id="banners">
+        <div class="content">
+          <div class="bar_ban">
+            <!-- 开始 配置banner_bar页面 -->
+            <ul id="change_active">
+              <li v-for="(item,index) in Content" v-bind:class=(index==0&&"active")>
+                <img v-bind:src=('./img/index_ico'+(index+1)+'@2x.png')>{{item.Title}}
+              </li>
+            </ul>
+            <!-- 配置banner_bar页面 结束 -->
+            <!-- 开始 配置banner页面 -->
+            <div id="page">
+              <div v-for="(str, index) in Content" class="ban_info" v-bind:class=(index==0&&"active")>
+                <div class="content">
+                  <p class="ban_title">{{str.Title}}</p>
+                  <p class="ban_descript" v-html="str.Descript">
+                  </p>
+                  <span v-if=str.Support>{{str.Support}}</span> 
+                  <div class="ban_a">
+                    <a href="" onclick="return false">{{str.Btn[0]}}
+                      <span v-if=str.Btn[3] v-bind:class=str.Btn[3].class>
+                        <span>{{str.Btn[4]}}</span>
+                        <img v-bind:src=str.Btn[5].imgone>
+                        <img v-if=str.Btn[5].imgtwo v-bind:src=str.Btn[5].imgtwo>
+                        <b v-if=str.Btn[6]>{{str.Btn[6][0]}}</b>
+                        <b v-if=str.Btn[6]>{{str.Btn[6][1]}}</b>
+                        <i></i>
+                      </span>
+                    </a>
+                    <a href="" v-if=str.Btn[1]>{{str.Btn[1]}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 配置banner页面结束开始 -->
+          </div>
+        </div>
+    </div>
+    <div class="solve_plan content">
+      <div class="solve_title title">
+        <h1>垂直行业解决方案</h1>
+        <p>整合资源、深度挖掘，提供一站式服务解决方案</p>
+      </div>
+      <!-- 开始 配置solve页面 -->
+      <div class="solve_list" id="solve"> 
+        <div v-for="item in Content">
+          <h2>{{item.Title}}</h2>
+          <p v-html="item.Descript"></p>
+          <a href="">了解详情</a>
+        </div>     
+      </div>
+      <!-- 配置solve页面 结束 -->
+    </div>
+    <div class="serve content">
+      <div class="serve_title title">
+        <h1>移动零售服务生态</h1>
+        <p>联合服务商、开发者、经营专家，共建服务生态，服务百万商家</p>
+      </div>
+      <div class="serve_list">
+        <!-- 开始 配置服务种类 -->
+        <ul>
+          <li v-for="item in serveContent"><a href="">{{item.Title}}</a></li>
+        </ul>
+        <!-- 配置服务种类 结束 -->
+      </div>
+    </div>
+    <div class="case content">
+      <div class="case_title title">
+        <h1>商家案例</h1>
+        <p>服务超过200万商家，为各类企业提供全套解决方案</p>
+      </div>
+      <div class="case_list">
+        <ul v-for="n in 3" class="case_list_ul">
+          <li v-for="n in 6"><a href=""></a></li>
+        </ul>
+      </div>
+      <div class="case_more">
+        <a href="">功能案例</a>
+      </div>
+    </div>
+    <div class="dynamic content">
+      <div class="dynamic_title title">
+        <h1>有赞动态</h1>
+      </div>
+      <div class="dynamic_list">
+        <div class="dynamic_list_about">
+          <h6>关于有赞</h6>
+          <p>
+            2012年11月27日，有赞（原名口袋通）在杭州贝塔咖<br>
+            啡馆孵化。主要从事移动电子商务系统研发、运营，目<br>
+            前旗下有：有赞微商城、有赞收银、有赞供货商、有赞<br>
+            微小店、有赞批发、有赞买家版等产品，以及全员开店<br>
+            移动分销解决方案。有赞希望成为交易生态里最被信任<br>
+            的引领者，并持续保持为一个“开心”的组织。
+          </p>
+        </div>
+        <div class="dynamic_list_medium">
+          <h6>媒体报道</h6>
+          <ul>
+            <li v-for="item in dynamicContent"><a href="">{{item.Content}}</a></li>
+          </ul>
+        </div>
+        <div class="dynamic_list_friends">
+          <h6>合作伙伴</h6>
+          <div class="dynamic_list_img">
+            <!-- 开始 dynamic -->
+            <ul v-for="n in 4">
+              <li v-for="k in 3"><img v-bind:src=('img/partner_icon_'+((n-1)*3+k)+'.png')></li>
+            </ul>
+            <!-- dynamic 结束 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="foot content">
+        <div class="foot_list">
+          <div class="foot_about">
+            <h3 class="title">关于有赞</h3>
+            <ul>
+              <li><a href="">关于有赞</a></li>
+              <li><a href="">合作联系</a></li>
+              <li><a href="">加入我们</a></li>
+              <li><a href="">品牌资料包 <img src="img/619f42ed1d7533bc1248c1b9c6aa8e44.png"></a></li>
+            </ul>
+          </div>
+          <div class="foot_serve">
+            <h3 class="title">产品服务</h3>
+            <div class="foot_serve_product">
+              <!-- 开始 foot_serve -->
+              <ul v-for="item in footServeContent">
+                <li v-for="n in item.Content.length"><a href="">{{item.Content[n-1]}}</a></li>
+              </ul>
+              <!-- foot_serve 结束 -->
+            </div>
+          </div>
+          <div class="foot_cell">
+            <h3>电话咨询</h3>
+            <p>开店咨询：0571 - 8522 5188</p>
+            <p>商家服务：0571 - 8998 8848</p>
+            <span>周一到周日 9:00 ~ 18:00</span>
+          </div>
+          <div class="foot_img">
+            <img src="img/footer_qrcode@2x.png">
+            <p>有赞服务指南</p>
+          </div>
+        </div>
+        <div class="foot_copyright">
+          <p>2012-2017 © youzan.com - &nbsp;<img src="img/276d5f72dc85cc584d83c08fefa36c2b.png"> 浙公网安备 33010602004354号 &nbsp;增值电信业务经营许可证：浙B2-20140331 - 浙ICP备13037466号</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
